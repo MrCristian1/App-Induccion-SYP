@@ -18,7 +18,7 @@ import { useAppContext } from '../context/AppContext'
 const challenges = [
   {
     id: 'organigrama',
-    title: 'Organigrama Solutions and Payroll',
+    title: 'Organigrama Solutions & Payroll',
     director: {
       id: 'ceo',
       name: 'Junta de Socios',
@@ -558,9 +558,9 @@ const HierarchyDragDrop = ({ onComplete }) => {
               disabled={progress !== 100}
               onClick={() => {
                 if (progress === 100) {
-                  completeLevel(4);
+                  completeLevel(6);
                   setShowResults(false);
-                  navigate('/achievement/4');
+                  navigate('/achievement/6');
                 }
               }}
               whileHover={progress === 100 ? { scale: 1.05 } : {}}
@@ -768,10 +768,10 @@ const HierarchyDragDrop = ({ onComplete }) => {
                 <div className="text-4xl font-bold text-green-600 mb-8">{Math.round(progress)}%</div>
                 <motion.button
                   onClick={() => {
-                    completeLevel(4);
+                    completeLevel(6);
                     setShowResults(false);
                     setTimeout(() => {
-                      navigate('/achievement/4');
+                      navigate('/achievement/6');
                     }, 300);
                   }}
                   className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-8 py-4 rounded-2xl font-bold hover:from-purple-600 hover:to-purple-800 transition-all duration-300 shadow-lg"

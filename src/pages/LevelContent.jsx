@@ -235,8 +235,8 @@ const LevelContent = () => {
   if (level && level.policies) {
     return <PoliciesLevel level={level} onStartQuiz={() => setShowQuiz(true)} />
   }
-  // Si es el nivel de accidentalidad (nivel 6), usar el componente especializado
-  if (level && level.id === 6) {
+  // Si es el nivel de accidentalidad (nivel 4), usar el componente especializado
+  if (level && level.id === 4) {
     return <AccidentLevel />
   }
 
@@ -250,8 +250,8 @@ const LevelContent = () => {
     return <ValuesGameLevel />
   }
 
-  // Si es el nivel de jerarquía y estructura organizacional (nivel 4), usar el componente especializado
-  if (level && level.id === 4) {
+  // Si es el nivel de jerarquía y estructura organizacional (nivel 6), usar el componente especializado
+  if (level && level.id === 6) {
     return <HierarchyLevel onComplete={() => navigate(`/achievement/${levelIdNum}`)} />
   }
 

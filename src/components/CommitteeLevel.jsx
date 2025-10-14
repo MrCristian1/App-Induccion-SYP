@@ -47,7 +47,7 @@ const committees = [
     color: 'blue',
     members: {
       workers: [
-        { name: 'Giovanna Gio', img: '/img/Giovanna.png' },
+        { name: 'Giovanna Guio', img: '/img/Giovanna.png' },
         { name: 'Yuly Peña', img: '/img/Yuly.png' },
         { name: 'Fabián Morales', img: '/img/Fabian.png' },
         { name: 'Rocío Guacamene', img: '/img/Rocio.png' },
@@ -72,7 +72,8 @@ const quizQuestions = [
   {
     id: 1,
     type: 'case',
-    question: 'Un trabajador ha reportado que está siendo objeto de burlas y comentarios despectivos por parte de sus compañeros de trabajo de manera constante.',
+    question: 'Acorde con la siguiente situación, indique a comité le corresponde el tratamiento: Un trabajador ha reportado que está siendo objeto de burlas y comentarios despectivos por parte de sus compañeros de trabajo de manera constante.',
+
     options: [
       { committee: 'COPASST', text: 'Comité Paritario de Seguridad y Salud en el Trabajo' },
       { committee: 'CCL', text: 'Comité de Convivencia Laboral' }
@@ -97,7 +98,7 @@ const quizQuestions = [
     question: 'Arrastra cada integrante al comité al que pertenece',
     members: [
       { name: 'Tatiana Chavarro', committee: 'COPASST', img: '/img/Tatiana.png' },
-      { name: 'Giovanna Gio', committee: 'CCL', img: '/img/Giovanna.png' },
+      { name: 'Giovanna Guio', committee: 'CCL', img: '/img/Giovanna.png' },
       { name: 'Dayan Manjarres', committee: 'COPASST', img: '/img/Dayana.png' },
       { name: 'Yuly Peña', committee: 'CCL', img: '/img/Yuly.png' },
       { name: 'Germán Hincapié', committee: 'COPASST', img: '/img/German.png' },

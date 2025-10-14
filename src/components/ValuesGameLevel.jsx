@@ -38,21 +38,21 @@ const ValuesGameLevel = () => {
       title: 'Normatividad de SST',
       icon: faBook,
       items: [
-        'DECRETO 1072 DE 2015 - Decreto Único Reglamentario del Sector Trabajo',
-        'RESOLUCIÓN 0312 DE 2019 - Define los Estándares Mínimos del SG-SST'
+        'DECRETO 1072 DE 2015 - Unifica en un solo cuerpo normativo la reglamentación laboral en Colombia. En materia de SG-SST, establece la obligación para todos los empleadores de implementar el sistema como requisito legal.',
+        'RESOLUCIÓN 0312 DE 2019 - Fija los requisitos básicos que deben cumplir las empresas en Seguridad y Salud en el Trabajo, de acuerdo con su tamaño y nivel de riesgo, para evaluar y garantizar la implementación del SG-SST. '
       ]
     },
     {
       title: 'Objetivos del SG-SST',
       icon: faShield,
       items: [
-        'Identificar los peligros, evaluar y valorar los riesgos y establecer los controles',
+        'Identificar los peligros, evaluar, valorar y controlar los riesgos',
         'Proteger la seguridad y salud de todos los trabajadores mediante mejora continua',
         'Cumplir la normatividad nacional vigente en materia de riesgos laborales'
       ]
     },
     {
-      title: 'Funciones de la Dirección',
+      title: 'Responsabilidades de la Dirección',
       icon: faBuilding,
       items: [
         'Disponer de recursos humanos, técnicos y financieros necesarios',
@@ -66,7 +66,7 @@ const ValuesGameLevel = () => {
       ]
     },
     {
-      title: 'Funciones de los Trabajadores',
+      title: 'Responsabilidades de los Trabajadores',
       icon: faUserShield,
       items: [
         'Procurar el cuidado integral de su salud',
@@ -93,7 +93,7 @@ const ValuesGameLevel = () => {
       explanation: "El SG-SST tiene como objetivo principal proteger la seguridad y salud de todos los trabajadores mediante la mejora continua."
     },
     {
-      question: "Es una función de la dirección en el SG-SST:",
+      question: "Es una responsabilidad de la dirección en el SG-SST:",
       options: [
         "Informar sobre accidentes menores",
         "Disponer de recursos necesarios para implementar el sistema",

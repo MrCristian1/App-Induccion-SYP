@@ -12,6 +12,7 @@ const Welcome = () => {
   // Estados para controlar las animaciones secuenciales
   const [animationStep, setAnimationStep] = useState(0)
   const [showButton, setShowButton] = useState(false)
+  const [showVideo, setShowVideo] = useState(false)
   const [showNameInput, setShowNameInput] = useState(false)
   const [userName, setUserNameLocal] = useState('')
   const [particles, setParticles] = useState([])
@@ -71,6 +72,15 @@ const Welcome = () => {
       // Transición al mapa
       navigate('/map')
     }
+  }
+
+  const handleBeginJourney = () => {
+    setShowVideo(true)
+  }
+
+  const handleContinueAfterVideo = () => {
+    setShowVideo(false)
+    setShowNameInput(true)
   }
   
   return (
@@ -172,7 +182,7 @@ const Welcome = () => {
           )}
           
           {/* Transición final */}
-          {animationStep === 3 && (
+          {animationStep === 3 && !showVideo && !showNameInput && (
             <motion.div
               key="transition"
               className="flex flex-col items-center justify-center"
@@ -201,10 +211,10 @@ const Welcome = () => {
                 <img src="/img/syp.png" alt={`${companyConfig.companyName} Logo`} className="w-full h-full" />
               </motion.div>
               
-              {showButton && !showNameInput && (
+              {showButton && (
                 <motion.button
                   className="bg-white text-primary text-xl font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-shadow"
-                  onClick={() => setShowNameInput(true)}
+                  onClick={handleBeginJourney}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   whileHover={{ 
@@ -216,77 +226,161 @@ const Welcome = () => {
                   Comenzar Recorrido <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                 </motion.button>
               )}
-              
-              {/* Contenedor de entrada de nombre */}
-              <AnimatePresence>
-                {showNameInput && (
-                  <motion.div
-                    className="mt-8 p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl"
-                    initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.8, y: 50 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            </motion.div>
+          )}
+
+          {/* Video de YouTube */}
+          {showVideo && (
+            <motion.div
+              key="video"
+              className="flex flex-col items-center justify-center w-full max-w-4xl px-4"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.div
+                className="p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl w-full"
+                initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 25
+                }}
+              >
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    Video de Bienvenida
+                  </h3>
+                  <p className="text-white/80 mb-6">
+                    Disfruta de este video antes de comenzar tu aventura
+                  </p>
+                  
+                  {/* Reproductor de YouTube */}
+                  <div
+                    className="relative mb-6 rounded-xl overflow-hidden"
+                    style={{ paddingBottom: '56.25%', height: 0 }} // Aspect ratio 16:9
                   >
-                    <motion.div
-                      className="text-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      <h3 className="text-2xl font-bold text-white mb-4">
-                        ¡Perfecto! Ahora cuéntanos tu nombre
-                      </h3>
-                      <p className="text-white/80 mb-6">
-                        Máximo 10 caracteres para personalizar tu experiencia
-                      </p>
-                      
-                      <motion.div
-                        className="relative mb-6"
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.3 }}
-                      >
-                        <input
-                          type="text"
-                          value={userName}
-                          onChange={(e) => {
-                            if (e.target.value.length <= 10) {
-                              setUserNameLocal(e.target.value)
-                            }
-                          }}
-                          placeholder="Tu nombre aquí..."
-                          className="w-full px-6 py-4 text-xl text-center bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:border-white/60 focus:bg-white/30 transition-all duration-300"
-                          maxLength={10}
-                          autoFocus
-                        />
-                        <div className="absolute -bottom-6 right-0 text-white/60 text-sm">
-                          {userName.length}/10
-                        </div>
-                      </motion.div>
-                      
-                      <motion.button
-                        onClick={handleStart}
-                        disabled={userName.trim().length === 0}
-                        className={`px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300 ${
-                          userName.trim().length > 0
-                            ? 'bg-white text-primary hover:bg-white/90 hover:scale-105 shadow-lg'
-                            : 'bg-white/30 text-white/50 cursor-not-allowed'
-                        }`}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        whileHover={userName.trim().length > 0 ? { scale: 1.05 } : {}}
-                        whileTap={userName.trim().length > 0 ? { scale: 0.95 } : {}}
-                      >
-                        ¡Empezar Aventura! <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-                      </motion.button>
-                    </motion.div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full"
+                      src="https://www.youtube.com/embed/GoD7pU2_pxE?autoplay=1&rel=0&modestbranding=1&showinfo=0"
+                      title="Video de Bienvenida"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  
+                  <motion.button
+                    onClick={handleContinueAfterVideo}
+                    className="px-8 py-3 rounded-xl font-bold text-lg bg-white text-primary hover:bg-white/90 hover:scale-105 shadow-lg transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Continuar <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </motion.button>
+                </div>
+              </motion.div>
             </motion.div>
           )}
           
+          {/* Contenedor de entrada de nombre */}
+          {animationStep === 3 && showNameInput && (
+            <motion.div
+              key="name-input"
+              className="flex flex-col items-center justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <motion.div 
+                className="w-48 h-48 mb-8"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ 
+                  scale: 1,
+                  opacity: 1,
+                  rotate: [0, 2, 0, -2, 0]
+                }}
+                transition={{ 
+                  scale: { duration: 0.5, ease: "easeOut" },
+                  opacity: { duration: 0.5, ease: "easeOut" },
+                  rotate: { 
+                    repeat: Infinity, 
+                    duration: 6,
+                    ease: "easeInOut" 
+                  }
+                }}
+              >
+                <img src="/img/syp.png" alt={`${companyConfig.companyName} Logo`} className="w-full h-full" />
+              </motion.div>
+
+              <motion.div
+                className="mt-8 p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl"
+                initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              >
+                <motion.div
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    ¡Perfecto! Ahora cuéntanos tu nombre
+                  </h3>
+                  <p className="text-white/80 mb-6">
+                    Máximo 40 caracteres para personalizar tu experiencia
+                  </p>
+                  
+                  <motion.div
+                    className="relative mb-6"
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    <input
+                      type="text"
+                      value={userName}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 40) {
+                          setUserNameLocal(e.target.value)
+                        }
+                      }}
+                      placeholder="Tu nombre aquí..."
+                      className="w-full px-6 py-4 text-xl text-center bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-xl text-white placeholder-white/60 focus:outline-none focus:border-white/60 focus:bg-white/30 transition-all duration-300"
+                      maxLength={40}
+                      autoFocus
+                    />
+                    <div className="absolute -bottom-6 right-0 text-white/60 text-sm">
+                      {userName.length}/40
+                    </div>
+                  </motion.div>
+                  
+                  <motion.button
+                    onClick={handleStart}
+                    disabled={userName.trim().length === 0}
+                    className={`px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300 ${
+                      userName.trim().length > 0
+                        ? 'bg-white text-primary hover:bg-white/90 hover:scale-105 shadow-lg'
+                        : 'bg-white/30 text-white/50 cursor-not-allowed'
+                    }`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    whileHover={userName.trim().length > 0 ? { scale: 1.05 } : {}}
+                    whileTap={userName.trim().length > 0 ? { scale: 0.95 } : {}}
+                  >
+                    ¡Empezar Aventura! <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </motion.button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          )}
 
         </AnimatePresence>
       </div>

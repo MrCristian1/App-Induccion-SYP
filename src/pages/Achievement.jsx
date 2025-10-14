@@ -1,8 +1,10 @@
+import { faClipboardList } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faAward, faScroll, faBriefcase, faGem, faUsersCog, faSitemap, faUsers, faStar, faExclamationTriangle, faCog } from '@fortawesome/free-solid-svg-icons'
+import { faDna } from '@fortawesome/free-solid-svg-icons'
 import { useAppContext } from '../context/AppContext'
 import Confetti from '../components/Confetti'
 
@@ -56,7 +58,9 @@ const Achievement = () => {
     'award': faAward,
     'star': faStar,
     'exclamation-triangle': faExclamationTriangle,
-    'cog': faCog
+    'cog': faCog,
+  'dna': faDna,
+  'clipboard-list': faClipboardList
   }
   
   if (!level) return null
@@ -333,7 +337,7 @@ const Achievement = () => {
     )
   }
 
-  // Si es el nivel 4 (jerarquía y estructura organizacional), usar el mismo estilo espacial
+  // Si es el nivel 4 (accidentalidad), usar el mismo estilo espacial
   if (levelIdNum === 4) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden flex items-center justify-center">
@@ -368,12 +372,10 @@ const Achievement = () => {
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <FontAwesomeIcon icon={iconMap[level.achievement.icon] || faSitemap} />
+            <FontAwesomeIcon icon={iconMap[level.achievement.icon] || faExclamationTriangle} />
           </motion.div>
-          
           <h2 className="text-4xl font-bold text-white mb-4">¡Felicitaciones!</h2>
           <p className="text-xl text-white/80 mb-2">Has completado el nivel {level.title}</p>
-          
           {/* Información del achievement */}
           <motion.div
             className="bg-white/10 backdrop-blur-md rounded-xl p-6 mb-8 border border-white/20"
@@ -384,7 +386,6 @@ const Achievement = () => {
             <h3 className="text-2xl font-bold text-yellow-400 mb-2">{level.achievement.name}</h3>
             <p className="text-white/80">{level.achievement.description}</p>
           </motion.div>
-          
           <motion.button
             className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-green-500/25 border border-green-400/50"
             onClick={handleContinue}
@@ -403,7 +404,7 @@ const Achievement = () => {
 
 
   
-  // Si es el nivel 6 (accidentes y riesgos), usar el mismo estilo espacial
+  // Si es el nivel 6 (jerarquía y estructura organizacional), usar el mismo estilo espacial
   if (levelIdNum === 6) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden flex items-center justify-center">
@@ -438,7 +439,7 @@ const Achievement = () => {
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <FontAwesomeIcon icon={iconMap[level.achievement.icon] || faAward} />
+            <FontAwesomeIcon icon={iconMap[level.achievement.icon] || faSitemap} />
           </motion.div>
           <h2 className="text-4xl font-bold text-white mb-4">¡Felicitaciones!</h2>
           <p className="text-xl text-white/80 mb-2">Has completado el nivel {level.title}</p>

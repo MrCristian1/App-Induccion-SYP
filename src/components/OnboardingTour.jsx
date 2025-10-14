@@ -163,7 +163,6 @@ const OnboardingTour = ({ onComplete, isVisible }) => {
   };
 
   if (!showTour) {
-    console.log('🎮 OnboardingTour: showTour es false, no renderizando');
     return null;
   }
 

@@ -244,14 +244,7 @@ const PoliciesLevel = ({ level, onStartQuiz }) => {
                                     className="text-6xl opacity-90 drop-shadow-2xl" 
                                   />
                                 </motion.div>
-                                <motion.div
-                                  className="px-5 py-3 rounded-full text-sm font-bold bg-white/20 backdrop-blur-sm border border-white/40"
-                                  initial={{ scale: 0 }}
-                                  animate={{ scale: 1 }}
-                                  transition={{ delay: 0.5 }}
-                                >
-                                  {policy.importance}
-                                </motion.div>
+                                {/* Eliminado importance, solo icono */}
                               </div>
                               
                               <motion.h3 

@@ -4,7 +4,7 @@ import {
   faDumbbell, faExclamationTriangle, faTemperatureHigh, 
   faBrain, faVirus, faUserShield, faChevronRight, 
   faCalendarDay, faArrowLeft, faPlayCircle, faClipboardList,
-  faShieldAlt, faFirstAid, faClock
+  faShieldAlt, faFirstAid, faClock, faCogs, faBookMedical
 } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -16,28 +16,36 @@ const riskCards = [
     icon: faDumbbell,
     color: 'from-blue-500 to-blue-700',
     bgColor: 'bg-blue-500/20',
-    description: 'Movimientos repetitivos, posturas forzadas, manipulación de cargas.'
+    description: 'Movimientos repetitivos, posturas forzadas, manipulación de cargas.',
+    icon2: faCogs,
+  description2: '<span class="font-bold text-white">Controles</span>: Programa de Vigilancia Epidemiológica Osteomuscular, Ejecución de inspecciones de puesto de trabajo, entrega de elementos ergonómicos, capacitación y sensibilizaciones.'
   },
   {
     title: 'Condiciones de Seguridad',
     icon: faExclamationTriangle,
     color: 'from-yellow-500 to-yellow-700',
     bgColor: 'bg-yellow-500/20',
-    description: 'Herramientas, equipos, instalaciones y procedimientos inseguros.'
+    description: 'Herramientas, equipos, instalaciones y procedimientos inseguros.',
+    icon2: faCogs,
+  description2: '<span class="font-bold text-white mt-3" style="display:inline-block;margin-top:0.75rem;">Controles</span>: Capacitaciones y sensibilizaciones.'
   },
   {
     title: 'Riesgos Físicos',
     icon: faTemperatureHigh,
     color: 'from-red-500 to-red-700',
     bgColor: 'bg-red-500/20',
-    description: 'Ruido, temperatura, radiación, vibración.'
+    description: 'Ruido, temperatura, radiación, vibración.',
+    icon2: faCogs,
+  description2: '<span class="font-bold text-white">Controles</span>: Recomendaciones para adecuación de puesto de trabajo en casa, capacitaciones y sensibilizaciones.'
   },
   {
     title: 'Riesgo Psicosocial',
     icon: faBrain,
     color: 'from-purple-500 to-purple-700',
     bgColor: 'bg-purple-500/20',
-    description: 'Estrés, acoso laboral, carga mental.'
+    description: 'Estrés, acoso laboral, carga mental.',
+    icon2: faCogs,
+  description2: '<span class="font-bold text-white">Controles</span>: Programa de Vigilancia Epidemiológica Psicosocial, aplicación de batería de riesgo psicosocial, encuesta de clima, actividades de intervención, capacitaciones y sensibilización.'
   },
   {
     title: 'Riesgos Biológicos',
@@ -45,7 +53,9 @@ const riskCards = [
     color: 'from-green-500 to-green-700',
     bgColor: 'bg-green-500/20',
     description: 'Virus, bacterias, hongos y otros agentes biológicos.',
-    fullWidth: true
+    fullWidth: true,
+    icon2: faCogs,
+  description2: '<span class="font-bold text-white mt-3" style="display:inline-block;margin-top:0.75rem;">Controles</span>: Capacitaciones y sensibilizaciones.'
   },
 ];
 
@@ -71,7 +81,28 @@ const accidentSteps = [
     icon: faClipboardList,
     color: "bg-yellow-500"
   },
-  // Paso 4 eliminado
+];
+
+// Definiciones solicitadas
+const definitions = [
+  {
+    term: "Accidente de trabajo",
+    definition: "Suceso repentino que ocurre por causa o con ocasión del trabajo y que produce lesión, invalidez o muerte.",
+    icon: faExclamationTriangle,
+    color: "from-red-500 to-red-600"
+  },
+  {
+    term: "Enfermedad laboral",
+    definition: "Estado patológico contraído como resultado de la exposición a factores de riesgo inherentes a la actividad laboral.",
+    icon: faVirus,
+    color: "from-orange-500 to-orange-600"
+  },
+  {
+    term: "Incidente de trabajo",
+    definition: "Evento relacionado con el trabajo que pudo haber causado daño, pero no produjo lesión ni enfermedad.",
+    icon: faShieldAlt,
+    color: "from-green-500 to-green-600"
+  }
 ];
 
 const AccidentLevel = () => {
@@ -201,7 +232,19 @@ const AccidentLevel = () => {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
-                        <p className="text-white/80">{card.description}</p>
+                        <p className="text-white/80 mb-4">{card.description}</p>
+                        
+                        {/* Nueva sección para controles */}
+                        <div className="mt-4 pt-4 border-t border-white/20">
+                          <div className="flex items-start gap-3">
+                            <div className="p-2 rounded-lg bg-white/10">
+                              <FontAwesomeIcon icon={card.icon2} className="text-sm text-white/80" />
+                            </div>
+                            <div>
+                              <p className="text-white/70 text-sm" dangerouslySetInnerHTML={{__html: card.description2}}></p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -209,7 +252,46 @@ const AccidentLevel = () => {
               </div>
             </motion.section>
 
-            {/* Sección de Procedimiento ante Accidentes */}
+            {/* Sección de Definiciones Importantes - MOVIDA AQUÍ */}
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="w-full max-w-6xl mb-16"
+            >
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-0.5 w-10 bg-indigo-500"></div>
+                <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+                  <FontAwesomeIcon icon={faBookMedical} className="text-indigo-400" />
+                  Definiciones Importantes
+                </h2>
+                <div className="h-0.5 flex-1 bg-indigo-500"></div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {definitions.map((def, idx) => (
+                  <motion.div
+                    key={def.term}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 }}
+                    className="bg-slate-800/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:shadow-xl"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className={`p-3 rounded-xl bg-gradient-to-br ${def.color} shadow-lg`}>
+                          <FontAwesomeIcon icon={def.icon} className="text-xl text-white" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-white">{def.term}</h3>
+                      </div>
+                      <p className="text-white/80 text-sm leading-relaxed">{def.definition}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.section>
+
+            {/* Sección de Procedimientos */}
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

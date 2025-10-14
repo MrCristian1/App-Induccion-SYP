@@ -156,7 +156,7 @@ function FinalCertificate() {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: 'Certificado de Finalización - Solutions and Payroll',
+        title: 'Certificado de Finalización - Solutions & Payroll',
         text: 'He completado exitosamente el programa de inducción',
       });
     } else {
@@ -270,14 +270,14 @@ function FinalCertificate() {
             >
               <div className="relative">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400/30 to-orange-500/30 backdrop-blur-sm p-3 border-2 border-yellow-300/30">
-                  <img src="/img/syp.png" alt="Solutions and Payroll" className="w-full h-full object-contain filter drop-shadow-lg" />
+                  <img src="/img/syp.png" alt="Solutions & Payroll" className="w-full h-full object-contain filter drop-shadow-lg" />
                 </div>
                 <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
                   <FontAwesomeIcon icon={faCertificate} className="text-white text-xs" />
                 </div>
               </div>
               <div className="text-left">
-                <h3 className="text-2xl font-bold text-white tracking-wide">Solutions and Payroll</h3>
+                <h3 className="text-2xl font-bold text-white tracking-wide">Solutions & Payroll</h3>
                 <p className="text-white/80 text-sm">Programa de Inducción Corporativa</p>
                 <p className="text-white/60 text-xs">Certificación Oficial de Finalización</p>
               </div>
@@ -394,7 +394,7 @@ function FinalCertificate() {
           >
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-white/50 text-sm">
-                © {new Date().getFullYear()} Solutions and Payroll • Todos los derechos reservados
+                © {new Date().getFullYear()} Solutions & Payroll • Todos los derechos reservados
               </div>
 
               <div className="flex items-center gap-3">

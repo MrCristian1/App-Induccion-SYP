@@ -5,7 +5,7 @@
 
 // Configuración general de la empresa
 export const companyConfig = {
-  companyName: "Solutions and Payroll",
+  companyName: "Solutions & Payroll",
   totalLevels: 8,
   requiredCorrectAnswers: 3, // Mínimo de respuestas correctas para pasar un nivel
 }
@@ -15,11 +15,11 @@ export const levelsData = [
   {
     id: 1,
     title: "Políticas de la empresa",
-    icon: "book-open",
+    icon: "scroll",
       policies: [
         {
           id: 1,
-          title: "POLÍTICA DE LA ORGANIZACIÓN",
+          title: "POLÍTICA DE GESTIÓN INTEGRAL",
           icon: "building",
           color: "from-blue-500 to-blue-700",
           description: "La Dirección mejorará continuamente el Sistema de Gestión Integral y se compromete a cumplir con los requisitos legales, a identificar los riesgos en todos los niveles, gestionar y aplicar controles que los prevengan y reduzcan su impacto; así como a involucrar a todos los empleados en la identificación y control de los mismos.",
@@ -30,7 +30,7 @@ export const levelsData = [
             "Participación de todos los empleados"
           ],
           badge: "Gestión Integral",
-          importance: "Alta"
+            // ...existing code...
         },
         {
           id: 2,
@@ -44,7 +44,7 @@ export const levelsData = [
             "Aplica en jornada laboral y centros de trabajo"
           ],
           badge: "Prevención",
-          importance: "Crítica"
+            // ...existing code...
         },
         {
           id: 3,
@@ -58,7 +58,7 @@ export const levelsData = [
             "Promoción del equilibrio vida-trabajo"
           ],
           badge: "Desconexión",
-          importance: "Alta"
+            // ...existing code...
         },
         {
           id: 4,
@@ -73,7 +73,7 @@ export const levelsData = [
             "Relaciones valiosas y duraderas"
           ],
           badge: "Servicio",
-          importance: "Alta"
+            // ...existing code...
         },
         {
           id: 5,
@@ -88,7 +88,7 @@ export const levelsData = [
             "Avisar accidentes al jefe inmediato"
           ],
           badge: "Teletrabajo",
-          importance: "Media"
+            // ...existing code...
         },
         {
           id: 6,
@@ -102,7 +102,7 @@ export const levelsData = [
             "Obligaciones y procedimientos claros"
           ],
           badge: "Protección de Datos",
-          importance: "Crítica"
+            // ...existing code...
         },
         {
           id: 7,
@@ -116,17 +116,17 @@ export const levelsData = [
             "Apoyo y desarrollo de actividades laborales"
           ],
           badge: "Seguridad de Información",
-          importance: "Alta"
+            // ...existing code...
         }
       ],
     content: [
       {
         type: "heading",
-        text: "Políticas de Solutions and Payroll"
+        text: "Políticas de Solutions & Payroll"
       },
       {
         type: "paragraph",
-        text: "En Solutions and Payroll, nuestras políticas están diseñadas para crear un ambiente de trabajo productivo, seguro y respetuoso para todos los colaboradores."
+        text: "En Solutions & Payroll, nuestras políticas están diseñadas para crear un ambiente de trabajo productivo, seguro y respetuoso para todos los colaboradores."
       }
     ],
     quiz: [
@@ -204,21 +204,21 @@ export const levelsData = [
     achievement: {
       name: "Experto en Políticas",
       icon: "scroll",
-      description: "¡Has demostrado conocer las políticas fundamentales de Solutions and Payroll!"
+      description: "¡Has demostrado conocer las políticas fundamentales de Solutions & Payroll!"
     }
   },
   {
     id: 2,
   title: "ADN de la empresa",
-    icon: "tasks",
+    icon: "dna",
     content: [
       {
   type: "heading",
-  text: "ADN de Solutions and Payroll"
+  text: "ADN de Solutions & Payroll"
       },
       {
         type: "paragraph",
-        text: "Solutions and Payroll se especializa en brindar soluciones integrales de gestión de nómina y recursos humanos para empresas de todos los tamaños."
+        text: "Solutions & Payroll se especializa en brindar soluciones integrales de gestión de nómina y recursos humanos para empresas de todos los tamaños."
       },
       {
         type: "subheading",
@@ -255,7 +255,7 @@ export const levelsData = [
     ],
     quiz: [
       {
-        question: "¿Cuál es una de las principales funciones de Solutions and Payroll?",
+        question: "¿Cuál es una de las principales funciones de Solutions & Payroll?",
         options: [
           "Desarrollo de software para videojuegos",
           "Gestión de nómina y recursos humanos",
@@ -306,15 +306,15 @@ export const levelsData = [
       }
     ],
     achievement: {
-      name: "Conocedor de Funciones",
-      icon: "briefcase",
-      description: "¡Has comprendido las funciones clave que desempeña Solutions and Payroll en el mercado!"
+  name: "Conocedor de ADN",
+  icon: "dna",
+  description: "¡Te apropiaste del ADN empresarial de Solutions & Payroll en el mercado!"
     }
   },
   {
     id: 3,
     title: "Fundamentos del SG-SST",
-    icon: "heart",
+  icon: "clipboard-list",
     type: "interactive-game", // Nuevo tipo para identificar que usa el componente de juego
     content: [
       {
@@ -323,23 +323,138 @@ export const levelsData = [
       },
       {
         type: "paragraph",
-        text: "Descubre nuestros valores corporativos a través de acertijos y conecta nuestra misión y visión con sus definiciones en este juego interactivo de drag & drop."
+        text: "Aprende los conceptos básicos del SG-SST de manera divertida. Identifica sus objetivos, principios y componentes a través de quizzes y actividades interactivas."
       }
     ],
     achievement: {
       name: "Experto en SG-SST",
-      icon: "gem",
+  icon: "clipboard-list",
       description: "¡Has demostrado tu comprensión de los fundamentos del Sistema de Gestión de Seguridad y Salud en el Trabajo!"
     }
   },
   {
     id: 4,
+    title: "Gestión de riesgos y Accidentalidad",
+    icon: "exclamation-triangle",
+    type: "accident-level",
+    content: [
+      {
+        type: "heading",
+        text: "Accidentalidad en Solutions & Payroll"
+      },
+      {
+        type: "paragraph",
+        text: "Próximamente aprenderás sobre la prevención y gestión de accidentes laborales en Solutions & Payroll."
+      }
+    ],
+    achievement: {
+      name: "Conocedor de Accidentalidad",
+      icon: "exclamation-triangle",
+      description: "¡Has aprendido los conceptos clave sobre accidentalidad laboral!"
+    }
+  },
+  {
+    id: 5,
+    title: "Comités internos",
+    icon: "users",
+    content: [
+      {
+        type: "heading",
+        text: "Comités Internos en Solutions & Payroll"
+      },
+      {
+        type: "paragraph",
+        text: "En Solutions & Payroll, los comités internos son fundamentales para fomentar la comunicación, la colaboración y el bienestar de todos los colaboradores."
+      },
+      {
+        type: "subheading",
+        text: "Comité de Bienestar"
+      },
+      {
+        type: "paragraph",
+        text: "Se encarga de promover actividades y programas que contribuyan al bienestar físico, mental y emocional de los empleados."
+      },
+      {
+        type: "subheading",
+        text: "Comité de Seguridad y Salud en el Trabajo"
+      },
+      {
+        type: "paragraph",
+        text: "Su objetivo es velar por el cumplimiento de las normas de seguridad y salud, previniendo riesgos y promoviendo un ambiente laboral seguro."
+      },
+      {
+        type: "subheading",
+        text: "Comité de Calidad"
+      },
+      {
+        type: "paragraph",
+        text: "Busca garantizar la calidad en todos los procesos y servicios de la empresa, implementando mejoras continuas."
+      },
+      {
+        type: "subheading",
+        text: "Comité de Innovación"
+      },
+      {
+        type: "paragraph",
+        text: "Fomenta la creatividad y la innovación entre los colaboradores, impulsando el desarrollo de nuevas ideas y proyectos."
+      }
+    ],
+    quiz: [
+      {
+        question: "¿Cuál es la función del Comité de Bienestar?",
+        options: [
+          "Aumentar la carga laboral",
+          "Promover actividades para el bienestar de los empleados",
+          "Reducir el salario de los empleados",
+          "Limitar la comunicación entre áreas"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "¿Qué busca el Comité de Seguridad y Salud en el Trabajo?",
+        options: [
+          "Incrementar los riesgos laborales",
+          "Velar por el cumplimiento de normas de seguridad y salud",
+          "Eliminar el descanso de los empleados",
+          "Prohibir el uso de elementos de protección"
+        ],
+        correctAnswer: 1
+      },
+      {
+        question: "¿Cuál es el objetivo del Comité de Calidad?",
+        options: [
+          "Garantizar la calidad en procesos y servicios",
+          "Reducir la calidad para disminuir costos",
+          "Aumentar el tiempo de entrega",
+          "Limitar la capacitación en calidad"
+        ],
+        correctAnswer: 0
+      },
+      {
+        question: "¿Qué fomenta el Comité de Innovación?",
+        options: [
+          "La rutina y el estancamiento",
+          "La creatividad y el desarrollo de nuevas ideas",
+          "La competencia desleal entre empleados",
+          "El incumplimiento de procesos"
+        ],
+        correctAnswer: 1
+      }
+    ],
+    achievement: {
+      name: "Colaborador Activo",
+      icon: "users",
+      description: "¡Has aprendido sobre la importancia de los comités internos en Solutions & Payroll!"
+    }
+  },
+  {
+    id: 6,
     title: "Jerarquía y estructura organizacional",
     icon: "sitemap",
     content: [
       {
         type: "heading",
-        text: "Jerarquía y Estructura Organizacional de Solutions and Payroll"
+        text: "Jerarquía y Estructura Organizacional de Solutions & Payroll"
       },
       {
         type: "paragraph",
@@ -441,122 +556,7 @@ export const levelsData = [
     achievement: {
       name: "Maestro Organizacional",
       icon: "sitemap",
-      description: "¡Has comprendido la estructura que sostiene y hace funcionar a Solutions and Payroll!"
-    }
-  },
-  {
-    id: 5,
-    title: "Comités internos",
-    icon: "users",
-    content: [
-      {
-        type: "heading",
-        text: "Comités Internos en Solutions and Payroll"
-      },
-      {
-        type: "paragraph",
-        text: "En Solutions and Payroll, los comités internos son fundamentales para fomentar la comunicación, la colaboración y el bienestar de todos los colaboradores."
-      },
-      {
-        type: "subheading",
-        text: "Comité de Bienestar"
-      },
-      {
-        type: "paragraph",
-        text: "Se encarga de promover actividades y programas que contribuyan al bienestar físico, mental y emocional de los empleados."
-      },
-      {
-        type: "subheading",
-        text: "Comité de Seguridad y Salud en el Trabajo"
-      },
-      {
-        type: "paragraph",
-        text: "Su objetivo es velar por el cumplimiento de las normas de seguridad y salud, previniendo riesgos y promoviendo un ambiente laboral seguro."
-      },
-      {
-        type: "subheading",
-        text: "Comité de Calidad"
-      },
-      {
-        type: "paragraph",
-        text: "Busca garantizar la calidad en todos los procesos y servicios de la empresa, implementando mejoras continuas."
-      },
-      {
-        type: "subheading",
-        text: "Comité de Innovación"
-      },
-      {
-        type: "paragraph",
-        text: "Fomenta la creatividad y la innovación entre los colaboradores, impulsando el desarrollo de nuevas ideas y proyectos."
-      }
-    ],
-    quiz: [
-      {
-        question: "¿Cuál es la función del Comité de Bienestar?",
-        options: [
-          "Aumentar la carga laboral",
-          "Promover actividades para el bienestar de los empleados",
-          "Reducir el salario de los empleados",
-          "Limitar la comunicación entre áreas"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "¿Qué busca el Comité de Seguridad y Salud en el Trabajo?",
-        options: [
-          "Incrementar los riesgos laborales",
-          "Velar por el cumplimiento de normas de seguridad y salud",
-          "Eliminar el descanso de los empleados",
-          "Prohibir el uso de elementos de protección"
-        ],
-        correctAnswer: 1
-      },
-      {
-        question: "¿Cuál es el objetivo del Comité de Calidad?",
-        options: [
-          "Garantizar la calidad en procesos y servicios",
-          "Reducir la calidad para disminuir costos",
-          "Aumentar el tiempo de entrega",
-          "Limitar la capacitación en calidad"
-        ],
-        correctAnswer: 0
-      },
-      {
-        question: "¿Qué fomenta el Comité de Innovación?",
-        options: [
-          "La rutina y el estancamiento",
-          "La creatividad y el desarrollo de nuevas ideas",
-          "La competencia desleal entre empleados",
-          "El incumplimiento de procesos"
-        ],
-        correctAnswer: 1
-      }
-    ],
-    achievement: {
-      name: "Colaborador Activo",
-      icon: "users",
-      description: "¡Has aprendido sobre la importancia de los comités internos en Solutions and Payroll!"
-    }
-  },
-  {
-    id: 6,
-    title: "Accidentalidad",
-    icon: "exclamation-triangle",
-    type: "accident-level",
-    content: [
-      {
-        type: "heading",
-        text: "Accidentalidad en Solutions and Payroll"
-      },
-      {
-        type: "paragraph",
-        text: "Próximamente aprenderás sobre la prevención y gestión de accidentes laborales en Solutions and Payroll."
-      }
-    ],
-    achievement: {
-      name: "Conocedor de Accidentalidad",
-      icon: "exclamation-triangle",
-      description: "¡Has aprendido los conceptos clave sobre accidentalidad laboral!"
+      description: "¡Has comprendido la estructura que sostiene y hace funcionar a Solutions & Payroll!"
     }
   },
   {
@@ -583,13 +583,13 @@ export const levelsData = [
     color: "from-indigo-900 via-indigo-700 to-slate-900",
     achievement: {
       name: "Experto en Procesos",
-      description: "Has comprendido el mapa de procesos de Solutions and Payroll y su importancia en la organización.",
+      description: "Has comprendido el mapa de procesos de Solutions & Payroll y su importancia en la organización.",
       icon: "cog"
     },
     content: [
       { type: "heading", text: "Mapa de Procesos" },
       { type: "paragraph", text: "El mapa de procesos es una representación gráfica que muestra los procesos de una organización y sus interrelaciones. Permite visualizar cómo se crean valor y se entregan resultados a los clientes." },
-      { type: "paragraph", text: "En Solutions and Payroll, nuestros procesos están diseñados para garantizar la excelencia operacional y la satisfacción del cliente." }
+      { type: "paragraph", text: "En Solutions & Payroll, nuestros procesos están diseñados para garantizar la excelencia operacional y la satisfacción del cliente." }
     ],
     quiz: []
   }
@@ -599,5 +599,5 @@ export const levelsData = [
 export const finalAchievement = {
   name: "Inducción Completada",
   icon: "award",
-  description: "¡Felicidades! Has completado exitosamente tu proceso de inducción en Solutions and Payroll. Ahora estás listo para formar parte de nuestro equipo con todos los conocimientos necesarios."
+  description: "¡Felicidades! Has completado exitosamente tu proceso de inducción en Solutions & Payroll. Ahora estás listo para formar parte de nuestro equipo con todos los conocimientos necesarios."
 }

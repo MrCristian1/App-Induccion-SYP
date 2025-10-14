@@ -34,7 +34,7 @@ const OrganizationalChart = () => {
       title: 'Director General',
       name: 'Director General',
       description: 'Responsable de la gestión administrativa y estratégica.',
-      reportsTo: 'ceo',
+      reportsTo: 'Junta de Socios',
       supervises: ['lider-gestion-humana', 'analista-administrativo-financiero', 'asistente-administrativo-financiero', 'asistente-comercial', 'asistente-comunicacion-marketing', 'outsourcing-marketing'],
       level: 2,
       color: 'from-blue-500 to-blue-700'
@@ -134,7 +134,7 @@ const OrganizationalChart = () => {
       title: 'Director de Operaciones',
       name: 'Director de Operaciones',
       description: 'Responsable de la gestión operativa de la empresa.',
-      reportsTo: 'ceo',
+      reportsTo: 'Junta de Socios',
       supervises: [
         'jefe-nomina',
         'lider-eor',
