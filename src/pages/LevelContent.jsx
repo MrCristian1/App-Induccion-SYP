@@ -31,6 +31,7 @@ import HierarchyLevel from '../components/HierarchyLevel'
 import AccidentLevel from '../components/AccidentLevel'
 import QualityLevel from '../components/QualityLevel'
 import ProcessMapLevel from '../components/ProcessMapLevel'
+import ACRLevel from '../components/ACRLevel'
 
 const LevelContent = () => {
   const { levelId } = useParams()
@@ -260,6 +261,7 @@ const LevelContent = () => {
     return <CommitteeLevel onComplete={() => navigate(`/achievement/${levelIdNum}`)} />
   }
 
+
   // Si es el nivel de gestión de calidad (nivel 7), usar el componente especializado
   if (level && level.id === 7) {
     return <QualityLevel />
@@ -268,6 +270,11 @@ const LevelContent = () => {
   // Si es el nivel de mapa de procesos (nivel 8), usar el componente especializado
   if (level && level.id === 8) {
     return <ProcessMapLevel />
+  }
+
+  // Si es el nivel de Fundamentos ACR (nivel 9), usar el componente especializado
+  if (level && level.id === 9) {
+    return <ACRLevel />
   }
 
   const handleNextQuestion = () => {

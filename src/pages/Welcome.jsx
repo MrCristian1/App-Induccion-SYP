@@ -254,7 +254,8 @@ const Welcome = () => {
                     Video de Bienvenida
                   </h3>
                   <p className="text-white/80 mb-6">
-                    Disfruta de este video antes de comenzar tu aventura
+                    AQUÍ VA EL VIDEO INTRODUCTORIO DE LA EMPRESA
+                    (Por ahora se deja un video cualquiera)
                   </p>
                   
                   {/* Reproductor de YouTube */}

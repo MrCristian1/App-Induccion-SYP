@@ -22,7 +22,7 @@ export const levelsData = [
           title: "POLÍTICA DE GESTIÓN INTEGRAL",
           icon: "building",
           color: "from-blue-500 to-blue-700",
-          description: "La Dirección mejorará continuamente el Sistema de Gestión Integral y se compromete a cumplir con los requisitos legales, a identificar los riesgos en todos los niveles, gestionar y aplicar controles que los prevengan y reduzcan su impacto; así como a involucrar a todos los empleados en la identificación y control de los mismos.",
+            description: "Solutions & Payroll S.A.S. ofrece servicios de administración de nómina, Employer of Record, outsourcing de tesorería y gestión de personal. La empresa busca la satisfacción de las partes interesadas mediante un enfoque en servicio, rentabilidad y crecimiento. Reconoce la importancia del capital humano y se compromete a mejorar continuamente su Sistema de Gestión Integral, prevenir riesgos laborales, promover el autocuidado y bienestar de los trabajadores, cumplir la normativa vigente y mantener entornos laborales seguros y saludables.",
           keyPoints: [
             "Mejora continua del Sistema de Gestión Integral",
             "Cumplimiento de requisitos legales",
@@ -590,6 +590,22 @@ export const levelsData = [
       { type: "heading", text: "Mapa de Procesos" },
       { type: "paragraph", text: "El mapa de procesos es una representación gráfica que muestra los procesos de una organización y sus interrelaciones. Permite visualizar cómo se crean valor y se entregan resultados a los clientes." },
       { type: "paragraph", text: "En Solutions & Payroll, nuestros procesos están diseñados para garantizar la excelencia operacional y la satisfacción del cliente." }
+    ],
+    quiz: []
+  },
+  {
+    id: 9,
+    title: "Fundamentos ACR",
+    icon: "award",
+    color: "from-blue-900 via-blue-700 to-slate-900",
+    achievement: {
+      name: "Fundamentos ACR",
+      description: "Has explorado los fundamentos ACR.",
+      icon: "award"
+    },
+    content: [
+      { type: "heading", text: "Fundamentos ACR" },
+      { type: "paragraph", text: "Bienvenido al nivel de Fundamentos ACR. Aquí aprenderás los conceptos esenciales relacionados con ACR." }
     ],
     quiz: []
   }

@@ -158,6 +158,7 @@ const Map = () => {
     { id: 6, worldX: -2200, worldY: 800, level: levelsData[5] }, // Jerarquía
     { id: 7, worldX: 1500, worldY: -1800, level: levelsData[6] }, // Sistema de gestión de calidad
     { id: 8, worldX: -1800, worldY: -2200, level: levelsData[7] }, // Mapa de Procesos
+    { id: 9, worldX: 2200, worldY: 2200, level: levelsData[8] }, // Fundamentos ACR
     { id: 'final', worldX: 0, worldY: -2500, level: { id: 'final', title: 'Logro Final', icon: 'trophy' } }
   ]
 
