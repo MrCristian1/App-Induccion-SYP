@@ -254,8 +254,8 @@ const Welcome = () => {
                     Video de Bienvenida
                   </h3>
                   <p className="text-white/80 mb-6">
-                    AQUÍ VA EL VIDEO INTRODUCTORIO DE LA EMPRESA
-                    (Por ahora se deja un video cualquiera)
+                    A continuación, te presentamos un video introductorio donde conocerás nuestra empresa y 
+                    nuestra historia. ¡Disfrútalo!
                   </p>
                   
                   {/* Reproductor de YouTube */}
@@ -265,7 +265,7 @@ const Welcome = () => {
                   >
                     <iframe
                       className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/GoD7pU2_pxE?autoplay=1&rel=0&modestbranding=1&showinfo=0"
+                      src="https://www.youtube.com/embed/tihpkwn53r0?autoplay=1&rel=0&modestbranding=1&showinfo=0"
                       title="Video de Bienvenida"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

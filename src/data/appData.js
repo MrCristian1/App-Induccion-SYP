@@ -51,7 +51,7 @@ export const levelsData = [
           title: "POLÍTICA DE DESCONEXIÓN LABORAL",
           icon: "power-off",
           color: "from-yellow-500 to-yellow-700",
-          description: "Solutions & Payroll S.A.S. promueve el equilibro entre la jornada laboral y los espacios personales para mejorar la calidad de vida de sus colaboradores, por lo tanto, se compromete: Respetar los horarios de trabajo. Acudir al colaborador fuera de la jornada laboral únicamente cuando haya un requerimiento urgente. Entre otras.",
+          description: "Solutions & Payroll S.A.S. promueve el equilibrio entre la jornada laboral y los espacios personales de sus colaboradores, con el propósito de mejorar su calidad de vida. Por ello, la organización se compromete a respetar los horarios de trabajo y a contactar a los colaboradores fuera de su jornada únicamente en casos de requerimientos urgentes, fomentando así un ambiente laboral saludable y respetuoso.",
           keyPoints: [
             "Respeto por los horarios de trabajo",
             "Contactar fuera de horario solo por urgencias",
@@ -65,7 +65,7 @@ export const levelsData = [
           title: "POLÍTICA DE SERVICIO",
           icon: "handshake",
           color: "from-green-500 to-green-700",
-          description: "En S&P, reconocemos que nuestros clientes son centro de nuestro hacer, comprendemos sus necesidades y nos comprometemos a satisfacerlas de manera efectiva. Comprensión de las necesidades del cliente. Soluciones oportunas y prácticas. Recursividad y accesibilidad. Experiencias satisfactorias. Relaciones valiosas y duraderas.",
+          description: "En S&P reconocemos que nuestros clientes son el eje central de nuestras acciones. Nos esforzamos por comprender sus necesidades y ofrecer soluciones oportunas, prácticas y accesibles. Actuamos con recursividad para garantizar experiencias satisfactorias y construir relaciones valiosas y duraderas basadas en la confianza y la satisfacción mutua.",
           keyPoints: [
             "Comprensión de las necesidades del cliente",
             "Soluciones oportunas y prácticas",
@@ -80,7 +80,7 @@ export const levelsData = [
           title: "POLÍTICA DE TELETRABAJO",
           icon: "laptop-house",
           color: "from-teal-500 to-teal-700",
-          description: "Solutions & Payroll S.A.S. tiene implementado un acuerdo de teletrabajo que busca mejorar la calidad de vida de sus colaboradores. Adicionalmente, está comprometido con la protección del medio ambiente, buscando reducir su huella de carbono y promoviendo un entorno más sostenible. Cumplimiento de políticas y RIT. Seguridad informática. Conectividad. Accidente de trabajo: avisar al jefe inmediato.",
+          description: "Solutions & Payroll S.A.S. cuenta con un acuerdo de teletrabajo orientado a mejorar la calidad de vida de sus colaboradores. Además, la organización mantiene un firme compromiso con la protección del medio ambiente, buscando reducir su huella de carbono y fomentar prácticas sostenibles. En este marco, se promueve el cumplimiento de las políticas institucionales y del Reglamento Interno de Trabajo, el cuidado de la seguridad informática, el mantenimiento de una adecuada conectividad y la notificación inmediata al jefe en caso de presentarse un accidente laboral.",
           keyPoints: [
             "Mejora de calidad de vida",
             "Protección del medio ambiente",
@@ -116,6 +116,21 @@ export const levelsData = [
             "Apoyo y desarrollo de actividades laborales"
           ],
           badge: "Seguridad de Información",
+            // ...existing code...
+        },
+        {
+          id: 8,
+          title: "POLÍTICA DE USO RESPONSABLE DE INTELIGENCIA ARTIFICIAL (IA)",
+          icon: "robot",
+          color: "from-cyan-500 to-blue-700",
+          description: "S&P establece que el uso de herramientas de inteligencia artificial debe ser responsable y seguro, protegiendo la información propia, de los clientes y de terceros. Se prohíbe compartir datos confidenciales o sensibles en plataformas no autorizadas, permitiendo su uso solo para fines informativos o de contenido no confidencial. Ante cualquier duda, los colaboradores deben consultar al equipo del Sistema de Gestión Integral, reafirmando así el compromiso de la empresa con la protección de la información y la confianza de sus clientes.",
+          keyPoints: [
+            "No ingresar información confidencial en plataformas de IA gratuitas o no autorizadas",
+            "Uso permitido solo para fines informativos o contenidos no confidenciales",
+            "Consultar al equipo del Sistema de Gestión Integral ante dudas",
+            "Proteger la información es compromiso esencial con clientes y aliados"
+          ],
+          badge: "IA Responsable",
             // ...existing code...
         }
       ],
@@ -199,6 +214,16 @@ export const levelsData = [
           "Solo información de clientes"
         ],
         correctAnswer: 0
+      },
+      {
+        question: "Según la Política de Uso Responsable de IA, ¿qué tipo de información NO se debe ingresar en plataformas de IA gratuitas?",
+        options: [
+          "Información pública de la empresa",
+          "Contenidos no confidenciales",
+          "Información confidencial, sensible o protegida",
+          "Preguntas generales de consulta"
+        ],
+        correctAnswer: 2
       }
     ],
     achievement: {

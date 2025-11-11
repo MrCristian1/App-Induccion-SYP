@@ -12,7 +12,15 @@ import {
   faClock,
   faUserTie,
   faShieldAlt,
-  faUsers
+  faUsers,
+  faRobot,
+  faBuilding,
+  faBan,
+  faPowerOff,
+  faHandshake,
+  faLaptopHouse,
+  faDatabase,
+  faLock
 } from '@fortawesome/free-solid-svg-icons'
 import PoliciesQuiz from './PoliciesQuiz'
 import { useAppContext } from '../context/AppContext'
@@ -66,7 +74,15 @@ const PoliciesLevel = ({ level, onStartQuiz }) => {
       'clock': faClock,
       'user-tie': faUserTie,
       'shield-alt': faShieldAlt,
-      'users': faUsers
+      'users': faUsers,
+      'robot': faRobot,
+      'building': faBuilding,
+      'ban': faBan,
+      'power-off': faPowerOff,
+      'handshake': faHandshake,
+      'laptop-house': faLaptopHouse,
+      'database': faDatabase,
+      'lock': faLock
     }
     return iconMap[iconName] || faBookOpen
   }
@@ -150,13 +166,15 @@ const PoliciesLevel = ({ level, onStartQuiz }) => {
               </motion.button>
               <div></div> {/* Spacer para centrar el título */}
             </div>
+            {/* Título fuera del contenedor */}
             <motion.div
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full shadow-2xl border border-white/20 mb-6"
+              className="flex items-center justify-center mb-6"
+              initial={{ opacity: 0, y: -40, scale: 0.7 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
             >
-              <FontAwesomeIcon icon={faBookOpen} className="mr-3 text-2xl" />
-              <span className="font-bold text-2xl">Políticas Empresariales</span>
+              <FontAwesomeIcon icon={faBookOpen} className="mr-4 text-5xl text-white" />
+              <span className="font-bold text-4xl text-white">Políticas Empresariales</span>
             </motion.div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -164,7 +182,6 @@ const PoliciesLevel = ({ level, onStartQuiz }) => {
               transition={{ delay: 0.2 }}
               className="text-white/80 max-w-3xl mx-auto text-xl leading-relaxed"
             >
-              Explora cada política de manera interactiva. Haz clic en las tarjetas para obtener más información y marca tu progreso.
             </motion.p>
           </div>
 

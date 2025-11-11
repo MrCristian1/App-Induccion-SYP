@@ -17,7 +17,8 @@ import {
   faHandshake,
   faLaptopHouse,
   faDatabase,
-  faLock
+  faLock,
+  faRobot
 } from '@fortawesome/free-solid-svg-icons'
 
 const PoliciesQuiz = ({ level, onComplete, onBackToPolicies, onNavigateToMap }) => {
@@ -110,6 +111,13 @@ const PoliciesQuiz = ({ level, onComplete, onBackToPolicies, onNavigateToMap }) 
       definition: "Cuida la información propia y de clientes en medios físicos y digitales para apoyar el trabajo.",
       icon: faLock,
       color: "from-gray-500 to-gray-700"
+    },
+    {
+      id: 8,
+      policyName: "POLÍTICA DE USO RESPONSABLE DE INTELIGENCIA ARTIFICIAL (IA)",
+      definition: "Uso responsable de IA, sin ingresar información confidencial en plataformas no autorizadas.",
+      icon: faRobot,
+      color: "from-cyan-500 to-blue-700"
     }
   ]
   // Revolver definiciones y nombres de políticas al iniciar el quiz
