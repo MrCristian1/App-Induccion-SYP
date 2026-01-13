@@ -106,6 +106,13 @@ function FinalCertificate() {
   const [fallingIcons, setFallingIcons] = useState([]);
   const [certificateId] = useState(`SYP-${new Date().getFullYear()}-${Math.random().toString(36).substr(2, 6).toUpperCase()}`);
 
+  // Redirigir a Welcome si no hay nombre de usuario
+  useEffect(() => {
+    if (!userName || userName.trim() === '') {
+      navigate('/')
+    }
+  }, [userName, navigate])
+
   // Array de iconos para la animación de fondo
   const backgroundIcons = [faStar, faMedal, faTrophy, faHeart, faGem, faShield, faBookOpen, faUsers, faAward, faCertificate];
 

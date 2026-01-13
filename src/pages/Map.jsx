@@ -85,6 +85,14 @@ const Map = () => {
     allLevelsCompleted,
     userName
   } = useAppContext()
+  
+  // Redirigir a Welcome si no hay nombre de usuario
+  useEffect(() => {
+    if (!userName || userName.trim() === '') {
+      navigate('/')
+    }
+  }, [userName, navigate])
+  
   // Mostrar modal de certificado cuando se completan los 8 niveles
   useEffect(() => {
     if (levelsData && levelsData.length > 0) {

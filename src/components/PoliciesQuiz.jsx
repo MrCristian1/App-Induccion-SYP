@@ -65,7 +65,7 @@ const PoliciesQuiz = ({ level, onComplete, onBackToPolicies, onNavigateToMap }) 
   const quizDataOriginal = [
     {
       id: 1,
-      policyName: "POLÍTICA DE LA ORGANIZACIÓN",
+      policyName: "POLÍTICA DE GESTIÓN INTEGRAL",
       definition: "Mejora continua, cumplimiento legal y gestión de riesgos con participación de todos los empleados.",
       icon: faBuilding,
       color: "from-blue-500 to-blue-700"

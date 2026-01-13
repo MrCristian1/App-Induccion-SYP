@@ -1182,7 +1182,7 @@ const ACRLevel = () => {
                           <div className="bg-blue-900/40 p-4 rounded-lg border-l-4 border-blue-400">
                             <p className="mb-3">
                               <span className="font-semibold text-blue-300">→</span> Accede al enlace:
-                              <span className="text-yellow-300 font-semibold ml-2">[URL del sistema ACR]</span>
+                              <span className="text-yellow-300 font-semibold ml-2">[https://acr.solutionsandpayroll.com]</span>
                             </p>
                             <p className="text-sm text-gray-300">
                               Una vez dentro, encontrarás la sección <strong className="text-purple-300">"INFORMACIÓN GENERAL"</strong>
