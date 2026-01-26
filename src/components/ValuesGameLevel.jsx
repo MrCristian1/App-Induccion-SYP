@@ -75,7 +75,8 @@ const ValuesGameLevel = () => {
         'Informar sobre peligros y riesgos en el trabajo',
         'Participar en capacitaciones de seguridad y salud',
         'Contribuir al cumplimiento de objetivos del SG-SST',
-        'Informar accidentes y participar en investigaciones'
+        'Informar accidentes y participar en investigaciones',
+        'Usar adecuadamente los elementos perifericos asignados (como teclado, mouse, soporte para portatil,e tc), durante toda la jornada laboral. Su incumplimiento, podrá generar acciones correctivas conforme a la normatividad interna y vigente. '
       ]
     }
   ];
