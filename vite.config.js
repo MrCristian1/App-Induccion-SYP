@@ -6,4 +6,6 @@ export default defineConfig({
   plugins: [
     react()
   ],
+  // Configuración para copiar archivos públicos (incluido .htaccess)
+  publicDir: 'public',
 })
